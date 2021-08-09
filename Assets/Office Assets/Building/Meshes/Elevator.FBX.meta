@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 5e4032a40c1d6c14b9b4c8ebba708696
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: asd
+    100002: asd01
+    100004: asd02
+    100006: asd04
+    100008: Doors
+    100010: //RootNode
+    100012: Elevator
+    100014: Elevator_PanelFloorSelector
+    100016: Elevator_PanelOutside
+    100018: floor
+    100020: Object01
+    100022: Object02
+    100024: Object03
+    100026: Roof
+    100028: W_3x_Door
+    100030: Elevator_Panel_Inside
+    100032: Elevator_Panel_Outside
+    100034: W_3x_Elevator_Door
+    400000: asd
+    400002: asd01
+    400004: asd02
+    400006: asd04
+    400008: Doors
+    400010: Elevator
+    400012: //RootNode
+    400014: Elevator_PanelFloorSelector
+    400016: Elevator_PanelOutside
+    400018: floor
+    400020: Object01
+    400022: Object02
+    400024: Object03
+    400026: Roof
+    400028: W_3x_Door
+    400030: Elevator_Panel_Inside
+    400032: Elevator_Panel_Outside
+    400034: W_3x_Elevator_Door
+    2300000: asd
+    2300002: asd01
+    2300004: asd02
+    2300006: asd04
+    2300008: Doors
+    2300010: Elevator
+    2300012: Elevator_PanelFloorSelector
+    2300014: Elevator_PanelOutside
+    2300016: floor
+    2300018: Object01
+    2300020: Object02
+    2300022: Object03
+    2300024: Roof
+    2300026: W_3x_Door
+    2300028: Elevator_Panel_Inside
+    2300030: Elevator_Panel_Outside
+    2300032: W_3x_Elevator_Door
+    2300034: //RootNode
+    3300000: asd
+    3300002: asd01
+    3300004: asd02
+    3300006: asd04
+    3300008: Doors
+    3300010: Elevator
+    3300012: Elevator_PanelFloorSelector
+    3300014: Elevator_PanelOutside
+    3300016: floor
+    3300018: Object01
+    3300020: Object02
+    3300022: Object03
+    3300024: Roof
+    3300026: W_3x_Door
+    3300028: Elevator_Panel_Inside
+    3300030: Elevator_Panel_Outside
+    3300032: W_3x_Elevator_Door
+    3300034: //RootNode
+    4300000: W_3x_Door
+    4300002: Elevator
+    4300004: floor
+    4300006: Roof
+    4300008: asd
+    4300010: asd01
+    4300012: asd02
+    4300014: Elevator_PanelFloorSelector
+    4300016: Elevator_PanelOutside
+    4300018: Doors
+    4300020: asd04
+    4300022: Object01
+    4300024: Object02
+    4300026: Object03
+    4300028: W_3x_Elevator_Door
+    4300030: Elevator_Panel_Inside
+    4300032: Elevator_Panel_Outside
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator
+    second: {fileID: 2100000, guid: a6d4d7f5c72679840bd1d54b56cb15e4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 48
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
