@@ -8,8 +8,6 @@ public class Room : MonoBehaviour
     public List<GameObject> connections;
     public List<GameObject> nextRooms;
     public Transform playerStart;
-    // We use a Renderer instead of Collider because Colliders seemed to be translating incorrectly.
-    public List<Renderer> boundingBoxes;
     // parentRoom is the room that this room was spawned from.
     GameObject parentRoom;
     List<GameObject> childRooms = new List<GameObject>();
@@ -41,8 +39,6 @@ public class Room : MonoBehaviour
         }
 
         while(allExits.Count!= 0) {
-            // NewRoom:
-
             GameObject exit = allExits.Dequeue();
             Vector3 exitPosition = exit.GetComponent<Connection>().connectionPoint.position;
             Vector3 exitNormal = exit.GetComponent<Connection>().exitPlane.transform.up;
@@ -50,16 +46,12 @@ public class Room : MonoBehaviour
             // We will track which room indexes we have already tried to build.
             List<int> alreadyAttemptedRoomIndexes = new List<int>();
 
-            // CreateRoom:
-
             // Instantiate a random room.
             GameObject roomToBuild = chooseRoomToBuild(alreadyAttemptedRoomIndexes);
             GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), Quaternion.identity);
 
             // Store the list of connection indexes we have tried to use as an entrance.
             List<int> alreadyAttemptedEntranceIndexes = new List<int>();
-
-            // ChooseEntrance:
 
             // Ensure that room position is at origin before we move it into position.
             // It may have moved from origin if we have previously tried a different connection as entrance.
