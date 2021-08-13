@@ -13,12 +13,26 @@ public class Room : MonoBehaviour
     List<GameObject> childRooms = new List<GameObject>();
     // isStartRoom indicates if this is the room we started in.
     bool isStartRoom = false;
+    public List<Door> doors;
+    bool inRoom = false;
 
     void OnTriggerEnter(Collider other) {
         Debug.Log("entered room: " + gameObject.name);
         if(!isStartRoom) {
             generateNextRoomLayer();
         }
+
+        // Upon entering, we enable all doors.
+        foreach(Door door in doors) {
+            door.gameObject.SetActive(true);
+        }
+
+        // We have entered the room.
+        inRoom = true;
+    }
+
+    public bool isInRoom() {
+        return inRoom;
     }
 
     void generateNextRoomLayer() {

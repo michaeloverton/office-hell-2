@@ -152,11 +152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3926711388651792300, guid: 00d597cc78f802f4489b8895887baac8, type: 3}
   startRooms:
-  - {fileID: 7429886895496406819, guid: 218612d0fa4652e46a01f9bd94ff8b90, type: 3}
-  - {fileID: 2938866578470133520, guid: 8fc8ec7b541567c42835399b07b033e6, type: 3}
+  - {fileID: 7025607573347322333, guid: 0ef6b2f5fd1809949a4ed7d628163c45, type: 3}
   rooms:
-  - {fileID: 7429886895496406819, guid: 218612d0fa4652e46a01f9bd94ff8b90, type: 3}
-  - {fileID: 2938866578470133520, guid: 8fc8ec7b541567c42835399b07b033e6, type: 3}
+  - {fileID: 7025607573347322333, guid: 0ef6b2f5fd1809949a4ed7d628163c45, type: 3}
+  - {fileID: 2511130755885295562, guid: babca976c441f394d82e881818087528, type: 3}
+  - {fileID: 7520181947705094865, guid: 0c655b471c753d145ac71944d388a5e5, type: 3}
+  - {fileID: 7709136194222969529, guid: e27c77e3bbfc9e845afa955540e4864a, type: 3}
+  - {fileID: 5529649417801172267, guid: b450c9bb0099a3b419d4858efb7cbeab, type: 3}
+  - {fileID: 2864558889995281694, guid: 670cafef68d1da94aaa7cd5aa3d59a89, type: 3}
+  - {fileID: 6476382011076552274, guid: 79c358ffec758834cb2aac7f7e94d33e, type: 3}
+  - {fileID: 668547690399174736, guid: f6e41e4a910ca1246a40fc61d06bc696, type: 3}
 --- !u!4 &56205144
 Transform:
   m_ObjectHideFlags: 0
@@ -165,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56205142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.169922, y: 7.290039, z: 30.322998}
+  m_LocalPosition: {x: 30, y: 7, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
