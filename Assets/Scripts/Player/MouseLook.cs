@@ -7,6 +7,8 @@ public class MouseLook : MonoBehaviour
 
     public float mouseSense = 100f;
     public Transform playerBody;
+    // Freeze look if pauseMenu is active.
+    public PauseMenu pauseMenu;
 
     private float xRotation = 0f;
 
@@ -19,6 +21,10 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pauseMenu.getIsActive()) {
+            return;
+        }
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
 

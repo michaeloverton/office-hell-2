@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Loading : MonoBehaviour
 {
     private bool isLoading = false;
-    private float waitTime = 0.5f;
+    private float waitTime = 0.25f;
     private float timer = 0.0f;
 
     void Update()
