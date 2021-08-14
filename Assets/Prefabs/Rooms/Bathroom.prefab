@@ -1445,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_6x3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 184960, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 438792, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -2105,6 +2109,10 @@ PrefabInstance:
     - target: {fileID: 184960, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
       propertyPath: m_Name
       value: Floor_6x3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184960, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 438792, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2880,6 +2888,10 @@ PrefabInstance:
     - target: {fileID: 184960, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
       propertyPath: m_Name
       value: Floor_6x3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184960, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 438792, guid: d966b42e3878cde43901a3b7514eedb8, type: 3}
       propertyPath: m_LocalPosition.x

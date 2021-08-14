@@ -2771,6 +2771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_6x4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 158132, guid: 1128b17c5401b064d83e38ecb7bdf899, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 458974, guid: 1128b17c5401b064d83e38ecb7bdf899, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.2910004
@@ -3030,6 +3034,10 @@ PrefabInstance:
     - target: {fileID: 158132, guid: 1128b17c5401b064d83e38ecb7bdf899, type: 3}
       propertyPath: m_Name
       value: Floor_6x4
+      objectReference: {fileID: 0}
+    - target: {fileID: 158132, guid: 1128b17c5401b064d83e38ecb7bdf899, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 458974, guid: 1128b17c5401b064d83e38ecb7bdf899, type: 3}
       propertyPath: m_LocalPosition.x
