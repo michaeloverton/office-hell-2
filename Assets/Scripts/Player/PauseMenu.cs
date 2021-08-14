@@ -7,11 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject canvas;
     private bool isActive = false;
+    public IntroScreen introScreen;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
+        if(Input.GetKeyDown(KeyCode.Escape) && !introScreen.getIsActive()) {
             isActive = !isActive;
             canvas.SetActive(isActive);
 

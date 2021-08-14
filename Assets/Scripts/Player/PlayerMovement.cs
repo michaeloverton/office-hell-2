@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     // Disable movement if pauseMenu is active.
     public PauseMenu pauseMenu;
+    public IntroScreen introScreen;
 
     // Walk sounds
     public float footstepDistance = 3.5f;
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pauseMenu.getIsActive()) {
+        if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
             return;
         }
 
