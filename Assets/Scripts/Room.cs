@@ -63,6 +63,8 @@ public class Room : MonoBehaviour
             // Instantiate a random room.
             GameObject roomToBuild = chooseRoomToBuild(alreadyAttemptedRoomIndexes);
             GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), Quaternion.identity);
+            // Iniitally, the room should not be active, so we don't bump the player.
+            room.SetActive(false);
 
             // Store the list of connection indexes we have tried to use as an entrance.
             List<int> alreadyAttemptedEntranceIndexes = new List<int>();
@@ -90,6 +92,7 @@ public class Room : MonoBehaviour
             room.GetComponent<Room>().setParentRoom(gameObject);
             // Add new room to the list of children.
             childRooms.Add(room);
+            room.SetActive(true);
 
             // We do not need to check for collisions because they are impossible if we only add one layer of rooms.
         }
