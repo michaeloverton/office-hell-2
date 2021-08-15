@@ -15,11 +15,15 @@ public class PlayerMovement : MonoBehaviour
     
     Vector3 velocity;
     bool isGrounded;
+    // Disable movement if pauseMenu is active.
+    public PauseMenu pauseMenu;
+    public IntroScreen introScreen;
 
     // Walk sounds
     public float footstepDistance = 3.5f;
     public AudioSource footstep;
     Vector3 lastFootstepLocation;
+    
 
     void Start() {
         lastFootstepLocation = controller.transform.position;
@@ -28,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
+            return;
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0) {

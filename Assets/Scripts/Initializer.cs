@@ -16,7 +16,8 @@ public class Initializer : MonoBehaviour
         start.GetComponent<Room>().setStartRoom(true);
         
         // Create player at starting point in start room.
-        Instantiate(player, start.GetComponent<Room>().playerStart.position, Quaternion.Euler(0, 180, 0));
+        // Instantiate(player, start.GetComponent<Room>().playerStart.position, Quaternion.Euler(0, 180, 0));
+        Instantiate(player, start.GetComponent<Room>().playerStart.position, start.GetComponent<Room>().playerStart.rotation);
 
         // Get all connections leaving start room.
         List<GameObject> connections = start.GetComponent<Room>().connections;

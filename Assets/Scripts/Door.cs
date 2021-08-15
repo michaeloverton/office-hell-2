@@ -5,17 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public Room room;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Collider doorCollider;
 
     void OnTriggerEnter(Collider other) {
         // If we are touching the door's collider, but we are NOT in the room the door
@@ -35,10 +25,12 @@ public class Door : MonoBehaviour
     }
 
     void open() {
+        doorCollider.enabled = false;
         this.transform.Rotate(0, 90, 0, Space.Self);
     }
 
     public void close() {
+        doorCollider.enabled = true;
         this.transform.Rotate(0, -90, 0, Space.Self);
     }
 }

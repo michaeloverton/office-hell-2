@@ -7,18 +7,29 @@ public class MouseLook : MonoBehaviour
 
     public float mouseSense = 100f;
     public Transform playerBody;
+    // Freeze look if pauseMenu is active.
+    public PauseMenu pauseMenu;
+    public IntroScreen introScreen;
 
     private float xRotation = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if(introScreen.getIsActive()) {
+            Cursor.lockState = CursorLockMode.None;
+        } else {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
+            return;
+        }
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
 

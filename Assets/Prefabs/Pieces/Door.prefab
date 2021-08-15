@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eedacab1c8381f479ec0ec8c5b9ab7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  room: {fileID: 0}
+  doorCollider: {fileID: 6116563858628958292}
 --- !u!136 &6501212271705150277
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -119,6 +121,12 @@ PrefabInstance:
 --- !u!4 &6055851061326524328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 421790, guid: 77bb397d2377530479de5911f85ada8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6055851061326659638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6116563858628958292 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 65533196671785058, guid: 77bb397d2377530479de5911f85ada8e,
     type: 3}
   m_PrefabInstance: {fileID: 6055851061326659638}
   m_PrefabAsset: {fileID: 0}
