@@ -19,8 +19,10 @@ public class Room : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         Debug.Log("entered room: " + gameObject.name);
         if(!isStartRoom) {
-            generateNextRoomLayer();
+            StartCoroutine(asyncGenerate());
         }
+
+        Debug.Log("passed coroutine");
 
         // Upon entering, we enable all doors.
         foreach(Door door in doors) {
@@ -35,15 +37,27 @@ public class Room : MonoBehaviour
         return inRoom;
     }
 
-    void generateNextRoomLayer() {
+    IEnumerator asyncGenerate() {
+        yield return null;
+
+        StartCoroutine(generateNextRoomLayer());
+
+        yield return null;
+    }
+
+    IEnumerator generateNextRoomLayer() {
+        yield return null;
+        
         // Delete children of parent room that are not our current room.
         foreach(GameObject child in parentRoom.GetComponent<Room>().childRooms) {
             if(child != gameObject) {
                 Destroy(child);
+                yield return null;
             }
         }
         // Then delete the parent room.
         Destroy(parentRoom);
+        yield return null;
 
         // Get all connections leaving the room.
         // Use the queue for breadth first creation.
@@ -63,6 +77,10 @@ public class Room : MonoBehaviour
             // Instantiate a random room.
             GameObject roomToBuild = chooseRoomToBuild(alreadyAttemptedRoomIndexes);
             GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), Quaternion.identity);
+            // Iniitally, the room should not be active, so we don't bump the player.
+            room.SetActive(false);
+
+            yield return null;
 
             // Store the list of connection indexes we have tried to use as an entrance.
             List<int> alreadyAttemptedEntranceIndexes = new List<int>();
@@ -86,13 +104,21 @@ public class Room : MonoBehaviour
             float rotation = Vector3.SignedAngle(newEntranceNormal, exitNormal, Vector3.up);
             room.transform.RotateAround(newEntrancePosition, Vector3.up, rotation);
 
+            yield return null;
+
             // Set the parent room of the new room.
             room.GetComponent<Room>().setParentRoom(gameObject);
             // Add new room to the list of children.
             childRooms.Add(room);
+            room.SetActive(true);
+
+            yield return null;
 
             // We do not need to check for collisions because they are impossible if we only add one layer of rooms.
         }
+
+        Debug.Log("finished coroutine");
+        yield return null;
     }
 
     GameObject chooseRoomToBuild(List<int> alreadyAttemptedRoomIndexes) {
