@@ -19,7 +19,7 @@ public class Room : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         Debug.Log("entered room: " + gameObject.name);
         if(!isStartRoom) {
-            StartCoroutine(generateNextRoomLayer());
+            StartCoroutine(asyncGenerate());
         }
 
         Debug.Log("passed coroutine");
@@ -35,6 +35,14 @@ public class Room : MonoBehaviour
 
     public bool isInRoom() {
         return inRoom;
+    }
+
+    IEnumerator asyncGenerate() {
+        yield return null;
+
+        StartCoroutine(generateNextRoomLayer());
+
+        yield return null;
     }
 
     IEnumerator generateNextRoomLayer() {
