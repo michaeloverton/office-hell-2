@@ -155,6 +155,7 @@ MonoBehaviour:
   startRooms:
   - {fileID: 7025607573347322333, guid: 0ef6b2f5fd1809949a4ed7d628163c45, type: 3}
   - {fileID: 7237409589515387300, guid: 16976a7fca30d694fb2adc95f1d24556, type: 3}
+  - {fileID: 2864558889995281694, guid: 670cafef68d1da94aaa7cd5aa3d59a89, type: 3}
   rooms:
   - {fileID: 7025607573347322333, guid: 0ef6b2f5fd1809949a4ed7d628163c45, type: 3}
   - {fileID: 2511130755885295562, guid: babca976c441f394d82e881818087528, type: 3}
