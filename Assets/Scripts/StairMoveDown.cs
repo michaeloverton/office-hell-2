@@ -10,10 +10,8 @@ public class StairMoveDown : MonoBehaviour
     // On entering the up or down trigger, move the stairwell up or down.
     void OnTriggerEnter(Collider other) {
         if(up) {
-            Debug.Log("moving up");
             stairwell.transform.Translate(0, 4, 0, Space.World);
         } else {
-            Debug.Log("moving down");
             stairwell.transform.Translate(0, -4, 0, Space.World);
         }
 
