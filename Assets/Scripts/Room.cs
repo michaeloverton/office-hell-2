@@ -22,8 +22,6 @@ public class Room : MonoBehaviour
             StartCoroutine(asyncGenerate());
         }
 
-        Debug.Log("passed coroutine");
-
         // Upon entering, we enable all doors.
         foreach(Door door in doors) {
             door.gameObject.SetActive(true);
@@ -48,16 +46,20 @@ public class Room : MonoBehaviour
     IEnumerator generateNextRoomLayer() {
         yield return null;
         
+        // WARNING: WE ONLY SKIP THIS BECAUSE OF THE STAIRWELL.
+        // MAKE SURE THIS DOESN'T CAUSE ANY BAD BEHAVIOR.
         // Delete children of parent room that are not our current room.
-        foreach(GameObject child in parentRoom.GetComponent<Room>().childRooms) {
-            if(child != gameObject) {
-                Destroy(child);
-                yield return null;
+        if(parentRoom != null) {
+            foreach(GameObject child in parentRoom.GetComponent<Room>().childRooms) {
+                if(child != gameObject) {
+                    Destroy(child);
+                    yield return null;
+                }
             }
+            // Then delete the parent room.
+            Destroy(parentRoom);
+            yield return null;
         }
-        // Then delete the parent room.
-        Destroy(parentRoom);
-        yield return null;
 
         // Get all connections leaving the room.
         // Use the queue for breadth first creation.
@@ -94,6 +96,8 @@ public class Room : MonoBehaviour
             int entranceConnectionIndex = chooseEntranceIndexToUse(alreadyAttemptedEntranceIndexes, roomConnections);
             GameObject entranceConnection = roomConnections[entranceConnectionIndex];
 
+            yield return null;
+
             // Translate room into position.
             Vector3 entrancePosition = entranceConnection.GetComponent<Connection>().connectionPoint.position;
             room.transform.Translate(exitPosition - entrancePosition, Space.Self);
@@ -117,7 +121,6 @@ public class Room : MonoBehaviour
             // We do not need to check for collisions because they are impossible if we only add one layer of rooms.
         }
 
-        Debug.Log("finished coroutine");
         yield return null;
     }
 
@@ -173,6 +176,12 @@ public class Room : MonoBehaviour
 
     public void addChildRoom(GameObject room) {
         childRooms.Add(room);
+    }
+
+    public void destroyChildRooms() {
+        foreach(GameObject child in childRooms) {
+            Destroy(child);
+        }
     }
 
     public void setStartRoom(bool isStart) {

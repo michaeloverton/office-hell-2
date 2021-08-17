@@ -12,7 +12,6 @@ public class Door : MonoBehaviour
         // is associated with, we are outside the room and entering into it.
         // In this case, disable the door so we don't get double doors.
         if(!room.isInRoom()) {
-            Debug.Log("disabling door!");
             gameObject.SetActive(false);
             return;
         }
