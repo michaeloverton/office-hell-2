@@ -42,7 +42,6 @@ public class PrefabLightmapData : MonoBehaviour
     void Init()
     {
         if (m_RendererInfo == null || m_RendererInfo.Length == 0) {
-            Debug.Log("no renderer info!");
             return;
         }
             
@@ -129,7 +128,6 @@ public class PrefabLightmapData : MonoBehaviour
 
     static void ApplyRendererInfo(RendererInfo[] infos, int[] lightmapOffsetIndex, LightInfo[] lightsInfo)
     {
-        Debug.Log("renderer info length: " + infos.Length);
         
         for (int i = 0; i < infos.Length; i++)
         {
@@ -171,13 +169,10 @@ public class PrefabLightmapData : MonoBehaviour
             Debug.LogError("ExtractLightmapData requires that you have baked you lightmaps and Auto mode is disabled.");
             return;
         }
-        Debug.Log("baking lightmaps");
 
         UnityEditor.Lightmapping.Bake();
 
         PrefabLightmapData[] prefabs = FindObjectsOfType<PrefabLightmapData>();
-
-        Debug.Log("prefab after baking count: " + prefabs.Length);
 
         foreach (var instance in prefabs)
         {
