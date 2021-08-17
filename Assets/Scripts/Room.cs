@@ -29,6 +29,9 @@ public class Room : MonoBehaviour
 
         // We have entered the room.
         inRoom = true;
+
+        Debug.Log(other.gameObject.GetComponent<RoomCounter>().getRoomCount());
+        other.gameObject.GetComponent<RoomCounter>().incrementRoomCount();
     }
 
     public bool isInRoom() {
