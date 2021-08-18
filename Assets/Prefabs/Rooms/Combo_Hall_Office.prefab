@@ -2694,10 +2694,11 @@ MonoBehaviour:
   - {fileID: 5529649417801172267, guid: 9a25ecb250e07434ba1021205b8d589d, type: 3}
   - {fileID: 7237409589515387300, guid: 16976a7fca30d694fb2adc95f1d24556, type: 3}
   nextWeirdRooms:
-  - {fileID: 7237409589515387300, guid: 8e8b248fc2e2842448e6f54210895372, type: 3}
+  - {fileID: 7237409589515387300, guid: 2aa700c14c826184891eeef9f9a7d67d, type: 3}
   - {fileID: 6326039449205075678, guid: 26e73139b2e70764c97fa384b4f18fd5, type: 3}
   - {fileID: 7025607573347322333, guid: cd188dee63cd6ca4ca0c3752f8f416e1, type: 3}
   - {fileID: 7237409589515387300, guid: bd2fa793efbdaea40b3d65fc5e4e4d6b, type: 3}
+  - {fileID: 4585601449987933397, guid: 4b12312c197f4e142be2cc4d788479f6, type: 3}
   playerStart: {fileID: 0}
   doors:
   - {fileID: 3820367377458993442}
