@@ -2595,6 +2595,7 @@ MonoBehaviour:
   - {fileID: 6476382011076552274, guid: 79c358ffec758834cb2aac7f7e94d33e, type: 3}
   - {fileID: 668547690399174736, guid: f6e41e4a910ca1246a40fc61d06bc696, type: 3}
   - {fileID: 7237409589515387300, guid: 16976a7fca30d694fb2adc95f1d24556, type: 3}
+  nextWeirdRooms: []
   playerStart: {fileID: 5245218459650005963}
   doors:
   - {fileID: 2462220226778767403}
@@ -6078,6 +6079,9 @@ MonoBehaviour:
   - {fileID: 6476382011076552274, guid: 79c358ffec758834cb2aac7f7e94d33e, type: 3}
   - {fileID: 668547690399174736, guid: f6e41e4a910ca1246a40fc61d06bc696, type: 3}
   - {fileID: 7237409589515387300, guid: 16976a7fca30d694fb2adc95f1d24556, type: 3}
+  nextWeirdRooms:
+  - {fileID: 7237409589515387300, guid: 8e8b248fc2e2842448e6f54210895372, type: 3}
+  - {fileID: 6326039449205075678, guid: 26e73139b2e70764c97fa384b4f18fd5, type: 3}
   playerStart: {fileID: 3892522221337087993}
   doors:
   - {fileID: 3391515308438533019}

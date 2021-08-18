@@ -898,6 +898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6c48c1aa4889c459cec724110f85bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWeirdRoomsAfterRoom: 10
+  weirdProbabilityIncrement: 5
 --- !u!1 &3926711389956241178
 GameObject:
   m_ObjectHideFlags: 0

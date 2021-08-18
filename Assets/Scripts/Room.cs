@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
 {
     public List<GameObject> connections;
     public List<GameObject> nextRooms;
+    public List<GameObject> nextWeirdRooms;
     public Transform playerStart;
     // parentRoom is the room that this room was spawned from.
     GameObject parentRoom;
@@ -18,8 +19,14 @@ public class Room : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         Debug.Log("entered room: " + gameObject.name);
+
+        // Increment the room counter on the player.
+        RoomCounter roomCounter = other.gameObject.GetComponent<RoomCounter>();
+        roomCounter.incrementRoomCount();
+
+        // Generate the next rooms.
         if(!isStartRoom) {
-            StartCoroutine(asyncGenerate());
+            StartCoroutine(asyncGenerate(roomCounter));
         }
 
         // Upon entering, we enable all doors.
@@ -30,23 +37,22 @@ public class Room : MonoBehaviour
         // We have entered the room.
         inRoom = true;
 
-        Debug.Log(other.gameObject.GetComponent<RoomCounter>().getRoomCount());
-        other.gameObject.GetComponent<RoomCounter>().incrementRoomCount();
+        
     }
 
     public bool isInRoom() {
         return inRoom;
     }
 
-    IEnumerator asyncGenerate() {
+    IEnumerator asyncGenerate(RoomCounter roomCounter) {
         yield return null;
 
-        StartCoroutine(generateNextRoomLayer());
+        StartCoroutine(generateNextRoomLayer(roomCounter));
 
         yield return null;
     }
 
-    IEnumerator generateNextRoomLayer() {
+    IEnumerator generateNextRoomLayer(RoomCounter roomCounter) {
         yield return null;
         
         // WARNING: WE ONLY SKIP THIS BECAUSE OF THE STAIRWELL.
@@ -80,8 +86,9 @@ public class Room : MonoBehaviour
             List<int> alreadyAttemptedRoomIndexes = new List<int>();
 
             // Instantiate a random room.
-            GameObject roomToBuild = chooseRoomToBuild(alreadyAttemptedRoomIndexes);
-            GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), Quaternion.identity);
+            GameObject roomToBuild = chooseRoomToBuild(roomCounter, alreadyAttemptedRoomIndexes);
+            // GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), Quaternion.identity);
+            GameObject room = Instantiate(roomToBuild, new Vector3(0,0,0), roomToBuild.transform.rotation);
             // Iniitally, the room should not be active, so we don't bump the player.
             room.SetActive(false);
 
@@ -127,12 +134,17 @@ public class Room : MonoBehaviour
         yield return null;
     }
 
-    GameObject chooseRoomToBuild(List<int> alreadyAttemptedRoomIndexes) {
+    GameObject chooseRoomToBuild(RoomCounter roomCounter, List<int> alreadyAttemptedRoomIndexes) {
+        // Determine if this room will be weird or not.
+        bool nextRoomIsWeird = roomCounter.nextRoomIsWeird();
+        Debug.Log("is next room weird? " + nextRoomIsWeird);
+        List<GameObject> possibleNextRooms = nextRoomIsWeird ? nextWeirdRooms : nextRooms;
+
         // Construct the list of rooms we can build, omitting rooms we have already attempted.
         List<GameObject> buildableRooms = new List<GameObject>();
-        for(int i=0; i<nextRooms.Count; i++) {
+        for(int i=0; i<possibleNextRooms.Count; i++) {
             if(!alreadyAttemptedRoomIndexes.Contains(i)) {
-                buildableRooms.Add(nextRooms[i]);
+                buildableRooms.Add(possibleNextRooms[i]);
             }
         }
 
