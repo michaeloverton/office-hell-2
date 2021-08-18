@@ -1294,8 +1294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6c48c1aa4889c459cec724110f85bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWeirdRoomsAfterRoom: 10
-  weirdProbabilityIncrement: 5
+  startWeirdRoomsAfterRoom: 5
+  weirdProbabilityIncrement: 10
 --- !u!1 &3926711389956241178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d52f76f1698423c4b9b30726e9611371, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eaad434cf485fa749a62c4447078db93, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.269
   m_Pitch: 1
