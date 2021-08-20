@@ -32,9 +32,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
-            return;
-        }
+        // if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
+        //     return;
+        // }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 

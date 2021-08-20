@@ -1168,6 +1168,7 @@ MonoBehaviour:
   - {fileID: 6476382011076552274, guid: 79c358ffec758834cb2aac7f7e94d33e, type: 3}
   - {fileID: 2864558889995281694, guid: 670cafef68d1da94aaa7cd5aa3d59a89, type: 3}
   - {fileID: 5529649417801172267, guid: 9a25ecb250e07434ba1021205b8d589d, type: 3}
+  - {fileID: 4481426148163186820, guid: a3c3d3f44d0a90544b75f1635ee7fc87, type: 3}
   nextWeirdRooms:
   - {fileID: 7237409589515387300, guid: 2aa700c14c826184891eeef9f9a7d67d, type: 3}
   - {fileID: 6326039449205075678, guid: 26e73139b2e70764c97fa384b4f18fd5, type: 3}
