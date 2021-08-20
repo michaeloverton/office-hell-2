@@ -4571,7 +4571,7 @@ MonoBehaviour:
   - {fileID: 4962362856219137103}
   - {fileID: 6488179036737524569}
   - {fileID: 3445255200381186928}
-  flickerProbability: 50
+  flickerProbability: 23
 --- !u!1 &7025607573874510788
 GameObject:
   m_ObjectHideFlags: 0
