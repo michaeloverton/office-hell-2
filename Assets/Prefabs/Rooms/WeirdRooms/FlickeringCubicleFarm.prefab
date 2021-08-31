@@ -1248,7 +1248,7 @@ MonoBehaviour:
   - {fileID: 7067427325565608414}
   - {fileID: 2841755443298455082}
   - {fileID: 3728385342683466726}
-  flickerProbability: 50
+  flickerProbability: 10
 --- !u!114 &4622733955721657899
 MonoBehaviour:
   m_ObjectHideFlags: 0
