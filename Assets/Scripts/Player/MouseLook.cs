@@ -16,19 +16,21 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(introScreen.getIsActive()) {
-            Cursor.lockState = CursorLockMode.None;
-        } else {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        // if(introScreen.getIsActive()) {
+        //     Cursor.lockState = CursorLockMode.None;
+        // } else {
+        //     Cursor.lockState = CursorLockMode.Locked;
+        // }
+
+         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
-            return;
-        }
+        // if(pauseMenu.getIsActive() || introScreen.getIsActive()) {
+        //     return;
+        // }
         
         float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
